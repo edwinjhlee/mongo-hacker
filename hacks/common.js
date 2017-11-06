@@ -309,7 +309,8 @@ tojson = function( x, indent , nolint, nocolor, sort_keys ) {
         return s;
     }
     case "function":
-        return colorize(x.toString(), mongo_hacker_config.colors['function'], nocolor);
+        // return colorize(x.toString(), mongo_hacker_config.colors['function'], nocolor);
+        return x.toString()
     default:
         throw "tojson can't handle type " + ( typeof x );
     }
